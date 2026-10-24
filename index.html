@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora Web</title>
+
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <script src="js/operaciones/suma.js" defer></script>
+    <script src="js/operaciones/resta.js" defer></script>
+    <script src="js/operaciones/multiplicacion.js" defer></script>
+    <script src="js/operaciones/division.js" defer></script>
+    <script src="js/operaciones/parentesis.js" defer></script>
+    <script src="js/calculadora.js" defer></script>
+  </head>
+  <body>
+    <main class="contenedor">
+      <section class="calculadora">
+        <header class="cabecera">
+          <h1>Calculadora</h1>
+        </header>
+
+        <div class="pantalla">
+          <label for="display" class="pantalla__titulo">Resultado</label>
+          <input
+            id="display"
+            type="text"
+            value=""
+            placeholder="0"
+            readonly
+            autocomplete="off"
+          />
+        </div>
+
+        <div class="teclado">
+          <button
+            type="button"
+            class="tecla tecla--limpiar"
+            onclick="limpiar()"
+          >
+            C
+          </button>
+          <button
+            type="button"
+            class="tecla tecla--especial"
+            onclick="presionar('(')"
+          >
+            (
+          </button>
+          <button
+            type="button"
+            class="tecla tecla--especial"
+            onclick="presionar(')')"
+          >
+            )
+          </button>
+          <button
+            type="button"
+            class="tecla tecla--operador"
+            onclick="presionar('÷')"
+          >
+            ÷
+          </button>
+
+          <button type="button" class="tecla" onclick="presionar('7')">
+            7
+          </button>
+          <button type="button" class="tecla" onclick="presionar('8')">
+            8
+          </button>
+          <button type="button" class="tecla" onclick="presionar('9')">
+            9
+          </button>
+          <button
+            type="button"
+            class="tecla tecla--operador"
+            onclick="presionar('×')"
+          >
+            ×
+          </button>
+
+          <button type="button" class="tecla" onclick="presionar('4')">
+            4
+          </button>
+          <button type="button" class="tecla" onclick="presionar('5')">
+            5
+          </button>
+          <button type="button" class="tecla" onclick="presionar('6')">
+            6
+          </button>
+          <button
+            type="button"
+            class="tecla tecla--operador"
+            onclick="presionar('-')"
+          >
+            −
+          </button>
+
+          <button type="button" class="tecla" onclick="presionar('1')">
+            1
+          </button>
+          <button type="button" class="tecla" onclick="presionar('2')">
+            2
+          </button>
+          <button type="button" class="tecla" onclick="presionar('3')">
+            3
+          </button>
+          <button
+            type="button"
+            class="tecla tecla--operador"
+            onclick="presionar('+')"
+          >
+            +
+          </button>
+
+          <button
+            type="button"
+            class="tecla tecla--especial"
+            onclick="borrar()"
+          >
+            ⌫
+          </button>
+          <button type="button" class="tecla" onclick="presionar('0')">
+            0
+          </button>
+          <button type="button" class="tecla" onclick="presionar('.')">
+            .
+          </button>
+          <button type="button" class="tecla tecla--igual" onclick="calcular()">
+            =
+          </button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
